@@ -1,12 +1,10 @@
-This fork is trying to translate WinXray project
-
-[winXray tips for getting started](./sub/introduce.md)
-[winXray related video list](https://www.youtube.com/results?search_query=winXray)
-[Network free vmess server subscription link](https://proxypool.ga/vmess/sub)
-[Free Online Shadowsocks Server Subscription Link](https://proxypool.ga/ss/sub)
-[Network free clash server subscription link](https://proxypoolss.tk/clash/proxies?speed=100&type=vmess,trojan)
-You can copy the above subscription links in various formats, and click "Bulk Import Links" in winXray to experience winXray's strong compatibility.
-The free server is only for testing (you must use PAC, do not open a global proxy, do not log in to your account, and do not use it for a long time).
+[winXray 入门小技巧](./sub/introduce.md)   
+[winXray 相关视频列表](https://www.youtube.com/results?search_query=winXray)  
+[网络免费 vmess 服务器订阅链接](https://proxypool.ga/vmess/sub)   
+[网络免费 Shadowsocks 服务器订阅链接](https://proxypool.ga/ss/sub)     
+[网络免费 clash 服务器订阅链接](https://proxypoolss.tk/clash/proxies?speed=100&type=vmess,trojan)   
+可复制上面各种格式订阅链接，在 winXray 中点击「批量导入链接」体验 winXray 有强大的兼容性。  
+免费的服务器仅供测试（一定要走 PAC，不要开全局代理不要登录账号更不要长时间使用 ）。
 
 # winXray 
 winXray[:loud_sound:](http://dict.youdao.com/dictvoice?audio=winxray&type=2) 是最简洁轻快的 V2Ray、XRay、Trojan、Trojan-go、Shadowsocks、SSR(ShadowsocksR)、SSRoT、NaïveProxy，SOCKS，HTTP,HTTPS 全能通用客户端（Windows系统），支持并发检测大量服务器并迅速找到当前最快的服务器，服务器连接异常时可自动寻找其他速度最快的服务器 - 切换速度快如闪电，自订阅源获取的服务器异常时可自动刷新订阅，并且自带一键自动部署服务端工具。

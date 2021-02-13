@@ -21,15 +21,15 @@ elseif(_ARGV.sshInstall){
 				_ARGV.sshInstall = "-p" + port +" " + dest;
 			}
 			
-			prcs = process("ssh","-t " +_ARGV.sshInstall + ` "echo -e '安装完成以后，您可以一次性复制所有服务器账号配置 - 然后在 winXray 主界面点击\e[1;31m「批量导入链接」\e[0m即可，winXray将逐行识别有效的服务器分享链接或通用JSON配置，并忽略无效的行。如果 CentOS 8安装失败 - 可尝试更换为 CentOS 7 并重新安装。\n';firewall-cmd --permanent --add-port=80/tcp;firewall-cmd --permanent --add-port=443/tcp;firewall-cmd --reload;iptables -A INPUT -p tcp --dport 80 -j ACCEPT;iptables -A INPUT -p tcp --dport 443 -j ACCEPT;wget -P /root -N --no-check-certificate ""https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh"" && chmod 700 /root/install.sh && /root/install.sh"`)
+			prcs = process("ssh","-t " +_ARGV.sshInstall + ` "echo -e 'After the installation is complete, you can copy all server account configurations at once-then click \e[1;31m "Bulk Import Links"\e[0m on the winXray main interface, and winXray will identify valid server sharing links or general purpose line by line JSON configuration and ignore invalid lines. If the installation of CentOS 8 fails-try to change to CentOS 7 and reinstall.\n';firewall-cmd --permanent --add-port=80/tcp;firewall-cmd --permanent --add-port=443/tcp;firewall-cmd --reload;iptables -A INPUT -p tcp --dport 80 -j ACCEPT;iptables -A INPUT -p tcp --dport 443 -j ACCEPT;wget -P /root -N --no-check-certificate ""https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh"" && chmod 700 /root/install.sh && /root/install.sh"`)
 				if(!prcs){
 					if(_WIN10_LATER){
 						import process.control; 
 					process.control("ms-settings:optionalfeatures");
-					console.log("请检查是否指定了正确的SSH端口,或尝试重新安装 OpenSSH.Client");
+					console.log("Please check if the correct SSH port is specified, or try to reinstall OpenSSH.Client");
 					}
 					else {
-						console.log("此功能仅支持 Windows 10 系统");
+						console.log("This feature just work with Windows 10 system");
 					} 
 				}
 				else {
@@ -63,10 +63,10 @@ elseif(_ARGV.sshLogin){
 					if(_WIN10_LATER){
 						import process.control; 
 					process.control("ms-settings:optionalfeatures");
-					console.log("请检查是否指定了正确的SSH端口,或尝试重新安装 OpenSSH.Client");
+					console.log("Please check if the correct SSH port is specified, or try to reinstall OpenSSH.Client");
 					}
 					else {
-						console.log("此功能仅支持 Windows 10 系统");
+						console.log("This feature just work with Windows 10 system");
 					} 
 				}
 				else {
@@ -101,11 +101,11 @@ elseif(_ARGV.sshInstallKey){
 				if(_WIN10_LATER){
 						import process.control; 
 					process.control("ms-settings:optionalfeatures");
-					console.log("请检查是否指定了正确的SSH端口,或尝试重新安装 OpenSSH.Client");
+					console.log("Please check if the correct SSH port is specified, or try to reinstall OpenSSH.Client");
 					}
 					else {
-						console.log("此功能仅支持 Windows 10 系统");
-					} 
+						console.log("This feature just work with Windows 10 system");
+					}  
 			}
 			else{
 				var dest,port = string.match(_ARGV.sshInstallKey,"(.+)\:(\d+)");
@@ -118,11 +118,11 @@ elseif(_ARGV.sshInstallKey){
 						if(_WIN10_LATER){
 							import process.control; 
 						process.control("ms-settings:optionalfeatures");
-						console.log("请检查是否指定了正确的SSH端口,或尝试重新安装 OpenSSH.Client");
-						}
-						else {
-							console.log("此功能仅支持 Windows 10 系统");
-						} 
+						console.log("Please check if the correct SSH port is specified, or try to reinstall OpenSSH.Client");
+					}
+					else {
+						console.log("This feature just work with Windows 10 system");
+					} 
 					}
 					else {
 						import process.job.limitKill;
@@ -147,7 +147,7 @@ else {
 	import fsys.update.simpleMain;
 	
 	if( fsys.update.simpleMain(
-		"winXray(V2Ray/V2Ray、Shadowsocks、Trojan通用客户端 )",
+		"winXray(V2Ray/V2Ray、Shadowsocks、Trojan Universal client )",
 		"https://raw.githubusercontent.com/winXray/winXray/master/release/update/version.txt",
 		..io.appData("/winXray/update"),
 		function(version,description,status){}
@@ -161,13 +161,13 @@ import win.ui;
 /*DSG{{*/
 mainForm = win.form(text="winXray";right=1019;bottom=679;bgcolor=15793151;border="none")
 mainForm.add(
-caption={cls="bkplus";text="winXray 3.7";left=67;top=9;right=727;bottom=27;align="left";color=6052956;dl=1;dt=1;font=LOGFONT(h=-14);z=7};
+caption={cls="bkplus";text="winXray-en 3.7";left=67;top=9;right=727;bottom=27;align="left";color=6052956;dl=1;dt=1;font=LOGFONT(h=-14);z=7};
 custom={cls="custom";left=83;top=40;right=1022;bottom=679;bgcolor=16777215;db=1;dl=1;dr=1;dt=1;z=4};
 logo={cls="bkplus";text='\uF1D9';left=35;top=7;right=64;bottom=32;color=3054125;dl=1;dt=1;font=LOGFONT(h=-18;name='FontAwesome');z=6};
 navBar={cls="bkplus";left=0;top=37;right=83;bottom=681;bgcolor=3442175;db=1;dl=1;dt=1;z=1};
-navJsonConfig={cls="plus";text="配置";left=0;top=132;right=85;bottom=212;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF0F6';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=5};
-navStart={cls="plus";text="首页";left=0;top=48;right=85;bottom=128;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF015';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=3};
-navTools={cls="plus";text="工具";left=0;top=216;right=85;bottom=296;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF0AD';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=8};
+navJsonConfig={cls="plus";text="Settings";left=0;top=132;right=85;bottom=212;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF0F6';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=5};
+navStart={cls="plus";text="Home";left=0;top=48;right=85;bottom=128;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF015';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=3};
+navTools={cls="plus";text="Tools";left=0;top=216;right=85;bottom=296;bkBottom=3;bkLeft=7;bkRight=8;bkTop=2;border={color=-65536};color=16777215;dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={font=LOGFONT(h=-37;name='FontAwesome');padding={bottom=20}};iconText='\uF0AD';notify=1;textPadding={bottom=10};valign="bottom";x=0.5;y=0.2;z=8};
 titleBar={cls="bkplus";left=0;top=0;right=1022;bottom=38;bgcolor=8036607;dl=1;dr=1;dt=1;forecolor=16777215;linearGradient=180;z=2}
 )
 /*}}*/
@@ -221,40 +221,40 @@ mainForm.wndproc = {
 		if( lParam = 0x205/*_WM_RBUTTONUP*/ ){
 			win.setForeground(mainForm.hwnd)
 			mainForm.popmenu = win.ui.popmenu(mainForm);
-			mainForm.popmenu.add('自动切换到最快的服务器',function(id){ 
+			mainForm.popmenu.add('Automatically switch to the fastest server',function(id){ 
 				publish("uiCommand.restartV2RayCore",)
 			});
-			mainForm.popmenu.add('立即更新所有订阅源',function(id){ 
+			mainForm.popmenu.add('Update all Subscriptions',function(id){ 
 				v2ray.outbounds.updateSubscription();
 			});
 			mainForm.popmenu.add();
 			
 			import v2ray.core;
-			var id = mainForm.popmenu.add('不使用代理',function(id){ 
+			var id = mainForm.popmenu.add('No Proxy',function(id){ 
 				sysProxy.switch("direct");  
 			});
 			mainForm.popmenu.check(id,config.proxy.mode=="direct",0/*_MF_BYCOMMAND*/);
 			
-			var id = mainForm.popmenu.add('使用全局代理',function(id){ 
+			var id = mainForm.popmenu.add('Global Proxy',function(id){ 
 				sysProxy.switch("proxy");  
 			});
 			mainForm.popmenu.check(id,config.proxy.mode=="proxy",0/*_MF_BYCOMMAND*/);
 			
-			var id = mainForm.popmenu.add('使用 PAC 自动代理',function(id){ 
+			var id = mainForm.popmenu.add('PAC automatic proxy',function(id){ 
 				sysProxy.switch("pac");  
 			});
 			mainForm.popmenu.check(id,config.proxy.mode=="pac",0/*_MF_BYCOMMAND*/);
 			
 			mainForm.popmenu.add();
 			
-			mainForm.popmenu.add('编辑 PAC 配置',function(id){  
+			mainForm.popmenu.add('Edit PAC configuration',function(id){  
 				publish("uiCommand.showPacForm");	
 			});
 			
 			if(_WIN10_LATER){
-				mainForm.popmenu.add('UWP 应用代理配置',function(id){  
+				mainForm.popmenu.add('UWP Application proxy configuration',function(id){  
 				 	if(_STUDIO_INVOKED){
-        				mainForm.msgErr("请先发布为 EXE！");
+        				mainForm.msgErr("Please publish as EXE！");
         				return;
         			}
         			
@@ -266,29 +266,29 @@ mainForm.wndproc = {
 			mainForm.popmenu.add();
 			
 			if(_WIN10_LATER){
-				mainForm.popmenu.add('打开系统代理设置',function(id){  
+				mainForm.popmenu.add('Open system proxy settings',function(id){  
 					import process.control; 
 					process.control("ms-settings:network-proxy")
 				});	
-				mainForm.popmenu.add('打开 Internet 代理选项',function(id){  
+				mainForm.popmenu.add('Open Internet proxy options',function(id){  
 					import process.control; 
 					process.control("inetcpl.cpl",,4);
 				});
 			}
 			else {
-				mainForm.popmenu.add('打开系统代理设置',function(id){  
+				mainForm.popmenu.add('Open system proxy settings',function(id){  
 					import process.control; 
 					process.control("inetcpl.cpl",,4);
 				});	
 			}
 				
-			mainForm.popmenu.add('打开网卡连接',function(id){  
+			mainForm.popmenu.add('Open the network card connection',function(id){  
 				import process;
 				process.explore("shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}");	
 			});
 			mainForm.popmenu.add();
 			
-			mainForm.popmenu.add('获取 winXray 最新源代码',function(id){  
+			mainForm.popmenu.add('Get the latest source code of winXray',function(id){  
 				import process;
 				process.openUrl("https://github.com/search?q=winXray+license%3AUnlicense+fork%3Atrue+sort%3Aupdated")
 			});
@@ -296,7 +296,7 @@ mainForm.wndproc = {
 			import chrome.path;
 			var chromePath = chrome.path();
 			if(chromePath && v2ray.core.socksProxyPort){
-				mainForm.popmenu.add('使用 SOCKS5 代理打开浏览器',function(id){ 
+				mainForm.popmenu.add('Use SOCKS5 proxy to open browser',function(id){ 
 					import process
 					process.execute(chromePath,` --proxy-server="SOCKS5://127.0.0.1:`+v2ray.core.socksProxyPort 
 						+`" --user-data-dir="` +io.appData("winXray/chrome-socks5")+ `" https://www.google.com`);
@@ -304,7 +304,7 @@ mainForm.wndproc = {
 			}
 			
 			mainForm.popmenu.add();
-			mainForm.popmenu.add('退出',function(id){ 
+			mainForm.popmenu.add('Quit',function(id){ 
 				mainForm.onClose = null;
 				mainForm.close()
 			});
@@ -370,10 +370,26 @@ subscribe("uiCommand.HotkeyChanged",function(...){
 			import sysProxy;
 			var mode = sysProxy.switchHotkey();
 			var dlg = win.dlg.message(win.getForeground())
-			dlg.ok(mode=="pac"?"已切换到 PAC 代理模式":"已切换到全局代理模式",1200);  
+			dlg.ok(mode=="pac"?" has been switched to PAC proxy mode":" has been switched to global proxy mode ",1200);  
 		},config.proxy.hotkey[1],config.proxy.hotkey[2])    	
 	}
 } )
 publish("uiCommand.HotkeyChanged");
 
-return win.loopMessage(); 
+mainForm.navTools.skin(
+	background = { 
+		hover = "/res/images/btn-hover.png";
+		focus = "/res/images/btn-focus.jpg";
+		active = "/res/images/btn-active.png";
+		disabled = "/res/images/btn-disabled.png"; 
+	}
+)
+mainForm.navTools.oncommand = function(id,event){
+	
+}
+
+mainForm.custom.oncommand = function(id,event){
+	
+}
+
+return win.loopMessage();
