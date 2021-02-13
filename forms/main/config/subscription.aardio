@@ -3,11 +3,11 @@ import win.ui;
 /*DSG{{*/
 var winform = win.form(text="aardio form";right=892;bottom=564;bgcolor=16777215)
 winform.add(
-btnAdd={cls="plus";text="添加订阅";left=10;top=4;right=143;bottom=31;align="left";dl=1;dt=1;font=LOGFONT(h=-15);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=5};
-btnRemove={cls="plus";text="移除选中订阅";left=143;top=4;right=276;bottom=31;align="left";dl=1;dt=1;font=LOGFONT(h=-15);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF014';notify=1;textPadding={left=30};z=6};
-btnUpdate={cls="plus";text="更新订阅";left=608;top=506;right=730;bottom=542;align="left";bgcolor=11580047;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=1};
-chkAll={cls="plus";text="全部启用";left=11;top=489;right=118;bottom=520;align="left";bgcolor=16777215;db=1;dl=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-16;name='FontAwesome')};iconText='\uF0C8';notify=1;textPadding={left=19};z=3};
-chkAutoRefreshSubscription={cls="plus";text="允许出站服务器异常自动刷新订阅";left=11;top=524;right=527;bottom=555;align="left";bgcolor=16777215;db=1;dl=1;dr=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-16;name='FontAwesome')};iconText='\uF0C8';notify=1;textPadding={left=19};z=2};
+btnAdd={cls="plus";text="Add subscription";left=10;top=4;right=159;bottom=31;align="left";dl=1;dt=1;font=LOGFONT(h=-15);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=5};
+btnRemove={cls="plus";text="Remove selected subscription";left=168;top=4;right=403;bottom=31;align="left";dl=1;dt=1;font=LOGFONT(h=-15);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF014';notify=1;textPadding={left=30};z=6};
+btnUpdate={cls="plus";text="Save";left=608;top=506;right=730;bottom=542;align="left";bgcolor=11580047;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=1};
+chkAll={cls="plus";text="Enable all";left=11;top=489;right=118;bottom=520;align="left";bgcolor=16777215;db=1;dl=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-16;name='FontAwesome')};iconText='\uF0C8';notify=1;textPadding={left=19};z=3};
+chkAutoRefreshSubscription={cls="plus";text="Allow outbound server to automatically refresh subscriptions";left=11;top=524;right=527;bottom=555;align="left";bgcolor=16777215;db=1;dl=1;dr=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-16;name='FontAwesome')};iconText='\uF0C8';notify=1;textPadding={left=19};z=2};
 listview={cls="listview";left=10;top=36;right=883;bottom=477;db=1;dl=1;dr=1;dt=1;edge=1;fullRow=1;gridLines=1;z=4};
 static={cls="static";text="双击上面单元格可直接编辑";left=710;top=616;right=867;bottom=634;color=10789024;db=1;dr=1;transparent=1;z=7}
 )
@@ -19,9 +19,9 @@ winform.chkAll.skin(style.checkBox);
 winform.btnAdd.skin(style.plainButton);
 
 winform.listview.insertColumn("",20) 
-winform.listview.insertColumn("状态",50) 
-winform.listview.insertColumn("备注",150) 
-winform.listview.insertColumn("订阅地址",-1) 
+winform.listview.insertColumn("status",50) 
+winform.listview.insertColumn("Remarks",150) 
+winform.listview.insertColumn("Subscription address",-1) 
 winform.listview.checkbox = true;
 winform.listview.gridLines = 0;
 
@@ -51,21 +51,21 @@ var reloadSubscriptions = function(){
 			outbondSubscribeUrlMap[sub.url] = null;	
 		}
 		else{
-			sub.checked = "禁用";
+			sub.checked = "Disable";
 		}
 	} 
 	
 	var count = 0;
 	for(url,v in outbondSubscribeUrlMap){ 
 		var tUrl = ..inet.url.split(subscribeUrl); 
-		..table.push(cfgSubscribeUrls,{url=url;ps=tUrl ? tUrl.host : "";checked="启用"})
+		..table.push(cfgSubscribeUrls,{url=url;ps=tUrl ? tUrl.host : "";checked="Enable"})
 	} 
 	
 	var chkAll = true;
 	var checked = {}
 	for(i=#cfgSubscribeUrls;1;-1){
 		var sub = cfgSubscribeUrls[i] 
-		if(sub.checked=="启用"){ 
+		if(sub.checked=="Enable"){ 
 			table.push(checked,i)
 		}
 		else {
@@ -104,7 +104,7 @@ grid.onEditChanged = function(text,iItem,iSubItem){
 			text = "https://github.com"+text;
 		}
 		
-		if(sub && sub.ps=="订阅源"){
+		if(sub && sub.ps=="Subscribe"){
 			import inet.url;
 			var tUrl = inet.url.split(text);
 			if(tUrl&&#tUrl.host){
@@ -119,20 +119,20 @@ grid.onEditChanged = function(text,iItem,iSubItem){
 		config.proxy.save();
 	}
 	else {
-		winform.msgErr("错误的订阅索引")
+		winform.msgErr("Bad subscription index")
 	}
 } 
 
 winform.popmenu = win.ui.popmenu(winform);//创建弹出菜单
-winform.popmenu.add('删除',function(id){
+winform.popmenu.add('delete',function(id){
 	winform.btnRemove.oncommand();
 });
-winform.popmenu.add('全部删除',function(id){ 
+winform.popmenu.add('delete all',function(id){ 
     for(i=1; winform.listview.count)  winform.listview.setSelected(i,true);
 	winform.btnRemove.oncommand();
 });
 winform.popmenu.add();
-winform.popmenu.add('自剪贴板添加订阅',function(id){ 
+winform.popmenu.add('Add subscription from clipboard',function(id){ 
     winform.btnAdd.oncommand();
 });
 
@@ -146,7 +146,7 @@ winform.btnUpdate.oncommand = function(id,event){
 	var cfgSubscribeUrls = config.proxy.subscribeUrls;
 	for(i=#cfgSubscribeUrls;1;-1){
 		var sub = cfgSubscribeUrls[i]  
-		outbondSubscribeUrlMap[sub.url] = sub.checked=="启用";
+		outbondSubscribeUrlMap[sub.url] = sub.checked=="Enable";
 	} 
 	
 	var removed = 0;
@@ -185,7 +185,7 @@ winform.btnRemove.oncommand = function(id,event){
 	var subscribeUrls = config.proxy.subscribeUrls;
 	var items = winform.listview.selected;
 	if(!#items){
-		return winform.msgWarn("未选中任何订阅项（ 请用鼠标单击订阅链接，不是指「勾选」 ）")
+		return winform.msgWarn("No subscription item is selected (please click the subscription link with the mouse, not [check])")
 	}
 	
 	winform.btnUpdate.disabledText = {'\uF254';'\uF251';'\uF252';'\uF253';'\uF250'}
@@ -222,7 +222,7 @@ winform.btnAdd.oncommand = function(id,event){
 	import inet.url;
 	import win.clip;
 	
-	var ps = "订阅源";
+	var ps = "Subscribe";
 	var url = win.clip.read();
 	url = url ? string.trim(url,'"\'\s\t\r\n ');
 	if(url && url[1]=='/'#){
@@ -239,9 +239,9 @@ winform.btnAdd.oncommand = function(id,event){
 		}
 	} 
 	
-	config.proxy.subscribeUrls[winform.listview.count+1] = {checked="启用";ps="订阅源";url=url}
+	config.proxy.subscribeUrls[winform.listview.count+1] = {checked="Enable";ps="Subscribe";url=url}
 	var item = winform.listview.addItem({
-		"";"启用";ps;url
+		"";"Enable";ps;url
 	})
 	
 	winform.listview.setChecked(item,true);
@@ -257,22 +257,22 @@ winform.listview.onnotify = function(id,code,ptr){
 		if( nmListView.uNewState & 0xF000/*_LVIS_STATEIMAGEMASK*/){
 			var selIndex = nmListView.iItem;
 			if( winform.listview.getChecked( selIndex ) ){
-				config.proxy.subscribeUrls[selIndex].checked = "启用";
+				config.proxy.subscribeUrls[selIndex].checked = "Enable";
 				config.proxy.save();
 				
-				winform.listview.setItemText("启用",selIndex,2);
+				winform.listview.setItemText("Enable",selIndex,2);
 			}
 			else {
-				config.proxy.subscribeUrls[selIndex].checked = "禁用";
+				config.proxy.subscribeUrls[selIndex].checked = "Disable";
 				config.proxy.save();
 				
-				winform.listview.setItemText("禁用",selIndex,2); 
+				winform.listview.setItemText("Disable",selIndex,2); 
 			} 
 			
 			var chkAll = true; 
 			for(i=#config.proxy.subscribeUrls;1;-1){
 				var sub = config.proxy.subscribeUrls[i] 
-				if(sub.checked!="启用"){ 
+				if(sub.checked!="Enable"){ 
 					chkAll = false;
 					
 				}

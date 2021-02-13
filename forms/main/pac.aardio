@@ -4,23 +4,23 @@ import fonts.fontAwesome;
 /*DSG{{*/
 var winform = win.form(text="winXray - 代理自动配置文件(PAC)";right=912;bottom=802;bgcolor=16777215)
 winform.add(
-btnAddDomain={cls="plus";text="添加";left=625;top=25;right=723;bottom=56;align="left";bgcolor=14935259;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF1C4';notify=1;textPadding={left=40};z=16};
-btnDeleteDomain={cls="plus";text="移除";left=740;top=25;right=838;bottom=56;align="left";bgcolor=14935259;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF1C4';notify=1;textPadding={left=40};z=17};
-btnReset={cls="plus";text="恢复PAC";left=609;top=763;right=741;bottom=794;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0E2';notify=1;textPadding={left=40};z=9};
-btnSave={cls="plus";text="保存PAC";left=751;top=763;right=883;bottom=794;align="left";bgcolor=11580047;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=10};
-btnUpdate={cls="plus";text="同步到网络最新PAC";left=402;top=763;right=599;bottom=794;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF26B';notify=1;textPadding={left=40};z=7};
+btnAddDomain={cls="plus";text="Add";left=664;top=22;right=762;bottom=53;align="left";bgcolor=14935259;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF1C4';notify=1;textPadding={left=40};z=16};
+btnDeleteDomain={cls="plus";text="Remove";left=780;top=23;right=878;bottom=54;align="left";bgcolor=14935259;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF1C4';notify=1;textPadding={left=40};z=17};
+btnReset={cls="plus";text="Reset PAC";left=609;top=763;right=741;bottom=792;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0E2';notify=1;textPadding={left=40};z=9};
+btnSave={cls="plus";text="Save PAC";left=751;top=763;right=883;bottom=794;align="left";bgcolor=11580047;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=10};
+btnUpdate={cls="plus";text="Update PAC";left=475;top=763;right=599;bottom=794;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF26B';notify=1;textPadding={left=40};z=7};
 editPacDirect={cls="richedit";left=8;top=97;right=901;bottom=745;db=1;dl=1;dr=1;dt=1;edge=1;font=LOGFONT(h=-13);hidesel=false;hscroll=1;multiline=1;vscroll=1;z=2};
-editPacDomain={cls="plus";left=91;top=29;right=436;bottom=53;align="right";bgcolor=16777215;border={bottom=1;color=-8355712};dl=1;dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=12};
+editPacDomain={cls="plus";left=162;top=28;right=507;bottom=52;align="right";bgcolor=16777215;border={bottom=1;color=-8355712};dl=1;dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=12};
 editPacProxy={cls="richedit";left=8;top=97;right=901;bottom=751;db=1;dl=1;dr=1;dt=1;edge=1;font=LOGFONT(h=-15);hidesel=false;hscroll=1;multiline=1;vscroll=1;z=3};
-groupbox={cls="groupbox";text="域名项";left=8;top=8;right=901;bottom=64;bgcolor=16777215;dl=1;dr=1;dt=1;edge=1;z=1};
-lbTip={cls="plus";text="以下域名通过代理连接（ 点域名绑定上面选项，点击右键菜单可批量导入域名 ）。";left=10;top=66;right=898;bottom=92;align="left";color=3947580;dl=1;dr=1;dt=1;font=LOGFONT(h=-13);notify=1;transparent=1;z=13};
-navDirect={cls="plus";text="直连域名( JSON )";left=184;top=750;right=315;bottom=782;border={top=1;color=-16744448};db=1;dl=1;z=8};
-navProxy={cls="plus";text="代理域名( JSON )";left=53;top=750;right=184;bottom=782;border={top=1;color=-16744448};db=1;dl=1;z=5};
+groupbox={cls="groupbox";text="Domain";left=8;top=8;right=901;bottom=64;bgcolor=16777215;dl=1;dr=1;dt=1;edge=1;z=1};
+lbTip={cls="plus";text="The following domain names are connected through a proxy (Dot domain name binding to the above option, click the right-click menu to import domain names in bulk).";left=10;top=66;right=898;bottom=105;align="left";color=3947580;dl=1;dr=1;dt=1;font=LOGFONT(h=-13);notify=1;transparent=1;z=13};
+navDirect={cls="plus";text="Directly connected domain name JSON )";left=184;top=750;right=414;bottom=782;border={top=1;color=-16744448};db=1;dl=1;z=8};
+navProxy={cls="plus";text="z";left=53;top=750;right=184;bottom=782;border={top=1;color=-16744448};db=1;dl=1;z=5};
 navRight={cls="plus";left=314;top=750;right=604;bottom=751;bgcolor=16777215;border={color=-16744448};db=1;dl=1;dr=1;forecolor=32768;linearGradient=180;z=11};
 plus={cls="plus";left=9;top=750;right=53;bottom=751;border={color=-16744448};db=1;dl=1;forecolor=32768;z=14};
-plus2={cls="plus";text="域名:";left=16;top=28;right=79;bottom=54;align="right";color=3947580;dl=1;dt=1;font=LOGFONT(h=-13);notify=1;transparent=1;z=15};
-radioDirect={cls="plus";text="直连";left=540;top=27;right=611;bottom=58;align="left";dr=1;dt=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-15;name='FontAwesome')};iconText='\uF111';notify=1;textPadding={left=15};z=6};
-radioProxy={cls="plus";text="代理";left=460;top=27;right=529;bottom=58;align="left";dr=1;dt=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-15;name='FontAwesome')};iconText='\uF111';notify=1;textPadding={left=15};z=4}
+plus2={cls="plus";text="Domain name:";left=35;top=28;right=134;bottom=54;align="right";color=3947580;dl=1;dt=1;font=LOGFONT(h=-13);notify=1;transparent=1;z=15};
+radioDirect={cls="plus";text="Direct";left=586;top=23;right=657;bottom=54;align="left";dr=1;dt=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-15;name='FontAwesome')};iconText='\uF111';notify=1;textPadding={left=15};z=6};
+radioProxy={cls="plus";text="Proxy";left=518;top=22;right=587;bottom=53;align="left";dr=1;dt=1;font=LOGFONT(h=-16);iconStyle={align="left";font=LOGFONT(h=-15;name='FontAwesome')};iconText='\uF111';notify=1;textPadding={left=15};z=4}
 )
 /*}}*/
 
@@ -430,15 +430,15 @@ winform.editPacProxy.enablePopMenu(function(){
 				winform.editPacDirect.text = web.json.stringify(direct,true)
 				winform.editPacProxy.modified = true;
 				winform.editPacDirect.modified = true;
-				winform.msgInfo('已成功导入 '+count+' 个代理域名或 IP 段,\r\n' 
-					+ ignored + '个域名已经是代理域名无需添加。\r\n下一步请点下面的「保存PAC」按钮。',1500);
+				winform.msgInfo('Successfully imported '+count+' Proxy domain names or IP segments,\r\n' 
+					+ ignored + 'This domain name is already a proxy domain name, no need to add. \r\nNext, please click the "Save PAC" button below.',1500);
 			}
 		};
 		
-		{ "导入所有 Telegram IP";
+		{ "Import all Telegram IP";
 			function(id){ 
 				var proxy =  web.json.tryParse(string.conv.fromWide(winform.editPacProxy.text)) 
-				if(!(proxy)) return winform.msgErr("代理域名配置格式错误");
+				if(!(proxy)) return winform.msgErr("The proxy domain name configuration format is incorrect");
 				
 				if( !..table.find(proxy,"91.108.56.0/22") ){
 					// https://ipinfo.io/AS44907 https://ipinfo.io/AS59930 https://ipinfo.io/AS62041
@@ -455,23 +455,23 @@ winform.editPacProxy.enablePopMenu(function(){
 					)
 					
 					winform.editPacProxy.text = web.json.stringify(proxy,true)
-					winform.msgOk('已成功导入所有 Telegram IP\r\n下一步请点下面的「保存PAC」按钮。')
+					winform.msgOk('All Telegram IPs have been successfully imported\r\nNext, please click the "Save PAC" button below.')
 				}
 				else {
-					winform.msgWarn("代理 IP 段已包含所有 Telegram IP，不需要重复导入！")
+					winform.msgWarn("The proxy IP segment already contains all Telegram IPs, so there is no need to import them again!")
 				}
 				
 			}
 		}; 
 		{ /*分隔符*/ };
-		{ "重置为默认 PAC";
+		{ "Reset to default PAC";
 			function(id){ 
 				import v2ray.pacServer;
 				v2ray.pacServer.resetPac();
 				winform.loadPacToEdit(v2ray.pacServer.loadPacText());
 			}
 		};  
-		{ "恢复为当前使用的 PAC";
+		{ "Revert to the current PAC";
 			function(id){ 
 				import v2ray.pacServer;
 				winform.loadPacToEdit(v2ray.pacServer.loadPacText());
@@ -500,16 +500,16 @@ var accelerator = win.ui.accelerator({
 winform.btnDeleteDomain.oncommand = function(id,event){
 	var domain = winform.editPacDomain.text;
 	if(!#domain){
-		return winform.editPacDomain.editBox.showErrorTip(,"请先指定域名")
+		return winform.editPacDomain.editBox.showErrorTip(,"Please specify domain name first")
 	}	
 	
 	var proxy =  web.json.tryParse(string.conv.fromWide(winform.editPacProxy.text))
 	var direct =  web.json.tryParse(string.conv.fromWide(winform.editPacDirect.text))
-	if(!(table.isArray(proxy))) return winform.msgErr("代理域名配置格式错误：不是有效的 JSON 数组。");
-	if(!(table.isArray(direct))) return winform.msgErr("直连域名配置格式错误：不是有效的 JSON 数组");
+	if(!(table.isArray(proxy))) return winform.msgErr("The proxy domain configuration format is incorrect: it is not a valid JSON array.");
+	if(!(table.isArray(direct))) return winform.msgErr("The configuration format of the direct domain name is incorrect: not a valid JSON array");
 	
 	if(!table.indexOf(proxy,domain) && !table.indexOf(direct,domain)  ){
-		winform.editPacDomain.editBox.showInfoTip(,"PAC 配置不包含此域名")
+		winform.editPacDomain.editBox.showInfoTip(,"PAC configuration does not include this domain name")
 		return; 
 	}
 	
@@ -521,23 +521,23 @@ winform.btnDeleteDomain.oncommand = function(id,event){
 	winform.editPacProxy.modified = true;
 	winform.editPacDirect.modified = true;
 	winform.btnUpdate.disabled = false;
-	winform.editPacDomain.editBox.showInfoTip(,"已移除此域名");
+	winform.editPacDomain.editBox.showInfoTip(,"This domain has been removed");
 }
 
 winform.btnAddDomain.oncommand = function(id,event){
 	var proxy =  web.json.tryParse(string.conv.fromWide(winform.editPacProxy.text))
 	var direct =  web.json.tryParse(string.conv.fromWide(winform.editPacDirect.text))
-	if(!(table.isArray(proxy))) return winform.msgErr("代理域名配置格式错误：不是有效的JSON数组。");
-	if(!(table.isArray(direct))) return winform.msgErr("直连域名配置格式错误：不是有效的JSON数组");
+	if(!(table.isArray(proxy))) return winform.msgErr("The proxy domain name configuration format is incorrect: it is not a valid JSON array.");
+	if(!(table.isArray(direct))) return winform.msgErr("The configuration format of the direct domain name is incorrect: not a valid JSON array");
 	
 	var domain = winform.editPacDomain.text;
 	if(!#domain){
-		return winform.editPacDomain.editBox.showErrorTip(,"请先指定域名")
+		return winform.editPacDomain.editBox.showErrorTip(,"Please specify domain name first")
 	}
 	
 	if(winform.radioProxy.checked){
 		if(!table.indexOf(direct,domain) && table.indexOf(proxy,domain)  ){
-			winform.editPacDomain.editBox.showWarningTip(,"此域名已经是代理域名，无需添加")
+			winform.editPacDomain.editBox.showWarningTip(,"This domain name is already a proxy domain name, no need to add")
 			return; 
 		}
 	
@@ -545,11 +545,11 @@ winform.btnAddDomain.oncommand = function(id,event){
 		if(!table.indexOf(proxy,domain)){
 			table.unshift(proxy,domain)
 		}
-		winform.editPacDomain.editBox.showInfoTip(,"已添加到代理域名");
+		winform.editPacDomain.editBox.showInfoTip(,"Added to proxy domain");
 	}
 	else { 
 		if(table.indexOf(direct,domain) && !table.indexOf(proxy,domain)  ){
-			winform.editPacDomain.editBox.showWarningTip(,"此域名已经是直连域名，无需添加")
+			winform.editPacDomain.editBox.showWarningTip(,"This domain name is already a directly connected domain name, no need to add")
 			return; 
 		}
 		
@@ -557,7 +557,7 @@ winform.btnAddDomain.oncommand = function(id,event){
 		if(!table.indexOf(direct,domain)){
 			table.unshift(direct,domain)
 		} 
-		winform.editPacDomain.editBox.showInfoTip(,"已添加到直连域名");
+		winform.editPacDomain.editBox.showInfoTip(,"Added to the directly connected domain");
 	}
 	
 	winform.editPacProxy.text = web.json.stringify(proxy,true)
@@ -571,7 +571,7 @@ winform.onClose = function(hwnd,message,wParam,lParam){
 	if(winform.editPacDirect.modified||winform.editPacProxy.modified){
 		winform.btnUpdate.disabled = true;
 		
-		if(!winform.msgAsk("PAC 配置已修改但尚未保存，确定要退出并放弃更改吗？")){
+		if(!winform.msgAsk("PAC configuration has been modified but not yet saved, are you sure you want to exit and discard the changes？")){
 			return true;
 		}
 	}
@@ -618,7 +618,11 @@ winform.editPacDomain.editBox.onChange = function(){
 		} 
 	}
 }
+
+winform.editPacProxy.oncommand = function(id,event){
 	
+}
+
 winform.enableDpiScaling();
 winform.show();
 win.loopMessage();

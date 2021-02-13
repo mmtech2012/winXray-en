@@ -5,37 +5,37 @@ import win.ui;
 /*DSG{{*/
 var winform = win.form(text="winXray - 代理服务器配置";right=999;bottom=504;bgcolor=16777215;exmode="none";min=false;mode="popup")
 winform.add(
-btnAddOutbound={cls="plus";text="新 增";left=705;top=410;right=808;bottom=446;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF067';notify=1;textPadding={left=40};z=17};
-btnCopySharedLink={cls="plus";text="复制";left=829;top=471;right=901;bottom=496;align="left";clip=1;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0C1';notify=1;textPadding={left=30};z=1};
-btnGenGuid={cls="plus";text="生成";left=914;top=259;right=986;bottom=284;align="left";clip=1;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0AD';notify=1;textPadding={left=30};z=19};
-btnImportSharedLink={cls="plus";text="导入";left=912;top=471;right=984;bottom=496;align="left";clip=1;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0C1';notify=1;textPadding={left=30};z=21};
-btnInsertField={cls="plus";text="插入更多配置字段";left=10;top=0;right=191;bottom=24;align="left";dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=18};
-btnSaveOutbound={cls="plus";text="保 存";left=826;top=410;right=929;bottom=446;align="left";bgcolor=11580047;db=1;disabled=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=16};
-btnUpdateCore={cls="plus";text="下载 / 更新 NaÏveProxy Core";left=637;top=61;right=979;bottom=89;align="left";color=3947580;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-17;name='FontAwesome');padding={left=18}};iconText='\uF0AB';notify=1;textPadding={left=50};z=23};
-cmbNetwork={cls="combobox";left=656;top=97;right=814;bottom=123;dr=1;dt=1;edge=1;items={"tcp";"kcp";"ws";"h2";"quic"};mode="dropdown";z=13};
-cmbProtocol={cls="combobox";left=656;top=28;right=814;bottom=54;dr=1;dt=1;edge=1;items={"vmess";"vless";"trojan";"trojan-go";"ssr";"shadowsocks";"naive";"socks";"https";"http"};mode="dropdown";z=12};
-cmbSecurity={cls="combobox";left=656;top=140;right=814;bottom=166;dr=1;dt=1;edge=1;items={"auto";"none";"chacha20-poly1305";"aes-128-gcm"};mode="dropdown";z=15};
+btnAddOutbound={cls="plus";text="New";left=705;top=410;right=808;bottom=446;align="left";bgcolor=14935259;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF067';notify=1;textPadding={left=40};z=17};
+btnCopySharedLink={cls="plus";text="copy";left=816;top=470;right=888;bottom=495;align="left";clip=1;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0C1';notify=1;textPadding={left=30};z=1};
+btnGenGuid={cls="plus";text="Generate";left=901;top=257;right=992;bottom=282;align="left";clip=1;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0AD';notify=1;textPadding={left=30};z=19};
+btnImportSharedLink={cls="plus";text="Import";left=884;top=470;right=969;bottom=495;align="left";clip=1;db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0C1';notify=1;textPadding={left=30};z=21};
+btnInsertField={cls="plus";text="Insert more configuration fields";left=10;top=0;right=218;bottom=24;align="left";dl=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=18};
+btnSaveOutbound={cls="plus";text="Save";left=826;top=410;right=929;bottom=446;align="left";bgcolor=11580047;db=1;disabled=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=22}};iconText='\uF0C7';notify=1;textPadding={left=40};z=16};
+btnUpdateCore={cls="plus";text="Download / update NaÏveProxy Core";left=637;top=61;right=979;bottom=89;align="left";color=3947580;dr=1;dt=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-17;name='FontAwesome');padding={left=18}};iconText='\uF0AB';notify=1;textPadding={left=50};z=23};
+cmbNetwork={cls="combobox";left=676;top=94;right=834;bottom=120;dr=1;dt=1;edge=1;items={"tcp";"kcp";"ws";"h2";"quic"};mode="dropdown";z=13};
+cmbProtocol={cls="combobox";left=676;top=23;right=834;bottom=49;dr=1;dt=1;edge=1;items={"vmess";"vless";"trojan";"trojan-go";"ssr";"shadowsocks";"naive";"socks";"https";"http"};mode="dropdown";z=12};
+cmbSecurity={cls="combobox";left=676;top=138;right=834;bottom=164;dr=1;dt=1;edge=1;items={"auto";"none";"chacha20-poly1305";"aes-128-gcm"};mode="dropdown";z=15};
 editAddress={cls="plus";left=656;top=183;right=878;bottom=207;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=2};
-editId={cls="plus";left=656;top=263;right=986;bottom=287;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};clip=1;dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);notify=1;textPadding={right=75;bottom=1};z=20};
+editId={cls="plus";left=647;top=262;right=977;bottom=286;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};clip=1;dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);notify=1;textPadding={right=75;bottom=1};z=20};
 editOutbound={cls="edit";left=15;top=25;right=472;bottom=462;db=1;dl=1;dr=1;dt=1;edge=1;font=LOGFONT(h=-13);hscroll=1;multiline=1;vscroll=1;z=14};
-editPort={cls="plus";left=656;top=224;right=745;bottom=248;align="left";bgcolor=16777215;num=1;border={bottom=1;color=-8355712};dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=4};
+editPort={cls="plus";left=656;top=224;right=745;bottom=248;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=4};
 editPs={cls="plus";left=656;top=306;right=878;bottom=330;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};dr=1;dt=1;editable="edit";font=LOGFONT(h=-16);textPadding={bottom=1};z=7};
-editSharedLink={cls="plus";left=13;top=475;right=986;bottom=499;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};clip=1;db=1;dl=1;dr=1;font=LOGFONT(h=-16);notify=1;textPadding={right=150;bottom=1};z=22};
-lbId={cls="static";text="登录用户( id ):";left=492;top=262;right=641;bottom=288;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=6};
-lbSecurity={cls="static";text="加密方式( security ):";left=473;top=136;right=641;bottom=162;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=10};
-qrPicture={cls="plus";left=510;top=358;right=606;bottom=454;bgcolor=16777215;db=1;dr=1;notify=1;repeat="scale";z=24};
-static={cls="static";text="服务器( address ):";left=481;top=178;right=641;bottom=204;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=3};
-static10={cls="static";text="代理协议( protocol ):";left=473;top=26;right=641;bottom=52;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=11};
-static2={cls="static";text="服务端口( port ):";left=498;top=220;right=641;bottom=246;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=5};
-static4={cls="static";text="备注( ps ):";left=498;top=304;right=641;bottom=330;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=8};
-static5={cls="static";text="传输协议( network ):";left=473;top=94;right=641;bottom=126;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=9}
+editSharedLink={cls="plus";left=17;top=472;right=990;bottom=496;align="left";bgcolor=16777215;border={bottom=1;color=-8355712};clip=1;db=1;dl=1;dr=1;font=LOGFONT(h=-16);notify=1;textPadding={right=150;bottom=1};z=22};
+lbId={cls="static";text="Login user (id ):";left=492;top=262;right=641;bottom=288;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=6};
+lbSecurity={cls="static";text="Encryption Method";left=473;top=136;right=642;bottom=163;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=10};
+qrPicture={cls="plus";left=511;top=359;right=607;bottom=455;bgcolor=16777215;db=1;dr=1;notify=1;repeat="scale";z=24};
+static={cls="static";text="Server Address";left=481;top=178;right=641;bottom=204;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=3};
+static10={cls="static";text="Proxy Protocol";left=473;top=26;right=641;bottom=52;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=11};
+static2={cls="static";text="Server port";left=560;top=222;right=642;bottom=248;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=5};
+static4={cls="static";text="Remarks (ps ):";left=498;top=304;right=641;bottom=330;align="right";bgcolor=16777215;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=8};
+static5={cls="static";text="Transfer Protocol";left=425;top=97;right=638;bottom=129;align="right";bgcolor=16777215;dl=1;dr=1;dt=1;font=LOGFONT(h=-16);transparent=1;z=9}
 )
 /*}}*/
 
 winform.outboundConfig = {};
 winform.addOutboundField = function(k,v){
 	if(winform.outboundConfig[k] !== null){
-		return winform.msgInfo("该字段已经存在，不需要添加！"); 
+		return winform.msgInfo("The field already exists, no need to add！"); 
 	}
 	
 	winform.outboundConfig[k] = v;
@@ -57,8 +57,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： V2Ray Core';
-		winform.editId.setCueBannerText("请输入 GUID");
+		winform.btnUpdateCore.text = 'Download/update： V2Ray Core';
+		winform.editId.setCueBannerText("please enter GUID");
 	}
 	elseif(sel=="shadowsocks"){
 		winform.cmbSecurity.items = {
@@ -71,8 +71,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		winform.cmbNetwork.items = {"tcp";}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： V2Ray Core';
-		winform.editId.setCueBannerText("请输入密码");
+		winform.btnUpdateCore.text = 'Download/update： V2Ray Core';
+		winform.editId.setCueBannerText("Please enter password");
 	}
 	elseif(sel=="ssr"){
 		winform.cmbNetwork.items = {
@@ -87,8 +87,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 
 		winform.cmbSecurity.selIndex = 1;
 		winform.outboundConfig.security = "none";  
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： SSR Core';
-		winform.editId.setCueBannerText("请输入密码");
+		winform.btnUpdateCore.text = 'Download/update： SSR Core';
+		winform.editId.setCueBannerText("Please enter password");
 	}
 	elseif(sel=="vless"){
 		winform.cmbSecurity.items = {
@@ -102,8 +102,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： Xray Core';
-		winform.editId.setCueBannerText("请输入 GUID");
+		winform.btnUpdateCore.text = 'Download/update： Xray Core';
+		winform.editId.setCueBannerText("please enter GUID");
 	}
 	elseif(sel=="naive"){
 		winform.cmbNetwork.items = {
@@ -115,8 +115,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		winform.cmbSecurity.items = {}
 		winform.outboundConfig.security = null;  
 		 
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： NaïveProxy Core';
-		winform.editId.setCueBannerText("请输入 用户名:密码");
+		winform.btnUpdateCore.text = 'Download/update： NaïveProxy Core';
+		winform.editId.setCueBannerText("Please enter Username: Password");
 	}
 	elseif(sel=="socks"){
 		winform.cmbSecurity.items = { }	
@@ -125,8 +125,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		winform.cmbNetwork.items = {"tcp";}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";  
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： V2Ray Core';
-		winform.editId.setCueBannerText("请输入 用户名:密码");
+		winform.btnUpdateCore.text = 'Download/update: V2Ray Core';
+		winform.editId.setCueBannerText("Please enter Username:Password");
 	}
 	elseif(sel=="http" || sel=="https"){
 		winform.cmbSecurity.items = { }	
@@ -135,8 +135,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		winform.cmbNetwork.items = {"tcp";}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";  
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： V2Ray Core';
-		winform.editId.setCueBannerText("请输入 用户名:密码");
+		winform.btnUpdateCore.text = 'Download/update： V2Ray Core';
+		winform.editId.setCueBannerText("Please enter Username:Password");
 	}
 	else {
 		winform.cmbSecurity.items = { }	
@@ -145,8 +145,8 @@ winform.cmbProtocol.onProtocolChange = function(){
 		winform.cmbNetwork.items = {"tcp";}
 		winform.cmbNetwork.selIndex = 1;
 		winform.outboundConfig.network = "tcp";
-		winform.btnUpdateCore.text = '下载 / 更新支持组件： V2Ray Core';
-		winform.editId.setCueBannerText("请输入密码");
+		winform.btnUpdateCore.text = 'Download/update: V2Ray Core';
+		winform.editId.setCueBannerText("Please enter password");
 	} 
 }
 
@@ -202,28 +202,28 @@ winform.editPs.editBox.onChange = function(){
 }
 
 var editOutboundTip = {
-	address = {"代理服务器地址";"值可以是域名或者IP地址"};
-	alterId = {"额外ID";"仅用于VMESS协议，与服务器一致即可"};
-	aid = {"额外ID(alterId)";"数值,仅用于VMESS协议，与服务器一致即可"};
-	network = {"传输协议(network)";"可选值为tcp,ws等，也可以放 SSR 的 protocol 值"};
-	net = {"传输协议(network)";"可选值为tcp,ws等"};
-	type = {"伪装类型";"默认的可选值为none,http等,kcp或quic此字段表示header.type，可选值为 none,srtp,utp,wechat-video,dtls,wireguard"}; 
-	ps = {"备注";"备注"}; 
-	tls = {"是否启用TLS";"可选值为tls,xtls或空值,vless协议省略时默认值为tls"}; 
-	path = {"请求路径";"用于ws,http等协议指定请求路径"}; 
-	httpMethod = {"HTTP请求方法";"用于http协议指定请求方法"}; 
-	headers = {"HTTP请求头";"用于ws,http等协议指定请求头"}; 
-	id = {"密码";"服务器密码"}; 
-	host = {"主机名";"用于指定http,ws等协议请求头中的主机名"}; 
-	protocol = {"协议";"可选值为 vmess,vless,shadowsocks,trojan,trojan-go 之一"}; 
-	port = {"端口";"服务器端口,数值"}; 
-	security = {"加密方式";"可省略,vmess协议默认为auto,vless协议默认为none"};
-	sni = {"TLS服务器名";"TLS客户端请求中的服务器名字段,如果不指定则默认取host或address字段值。"}; 
-	flow = {"流控";"目前仅用于选择 XTLS 的算法,省略时默认值为xtls-rprx-direct"}; 
-	obfs = {"混淆插件";"可选值：plain,http_simple,http_post,tls1.2_ticket_auth ..."}; 
-	obfsParam = {"混淆参数";"SSR 里的 obfs_param"}; 
-	networkParam = {"SSR网络协议参数";"SSR 里的 protocol_param"}; 
-	concurrency = {"Mux多路复用:最大并发连接数";"最小值1，最大值1024，特殊值-1，不加载mux模块。缺省由winXray根据连接协议自动设定此值。"}; 
+	address = {"Proxy server address ";" value can be domain name or IP address"};
+	alterId = {"The additional ID ";" is only used for the VMESS protocol, which is consistent with the server"};
+	aid = {"Additional ID (alterId) ";" value, only used for VMESS protocol, it can be consistent with the server"};
+	network = {"Transmission protocol (network)";"The optional values are tcp, ws, etc., or you can put the protocol value of SSR"};
+	net = {"Transmission protocol (network)";"The optional values are tcp, ws, etc."};
+	type = {"Camouflage type ";" The default optional values are none, http, etc., kcp or quic this field represents header.type, optional values are none, srtp, utp, wechat-video, dtls, wireguard"}; 
+	ps = {"Remarks ";" Remarks"}; 
+	tls = {"Whether to enable TLS";" The optional values are tls, xtls or null. If the vless protocol is omitted, the default value is tls"}; 
+	path = {"Request path";"Used for ws, http and other protocols to specify the request path"}; 
+	httpMethod = {"HTTP request method ";" is used to specify the request method of http protocol"}; 
+	headers = {"HTTP request header ";" is used to specify request headers for ws, http and other protocols"}; 
+	id = {"Password ";" server password"}; 
+	host = {"Host name ";" is used to specify the host name in the HTTP, ws and other protocol request headers"}; 
+	protocol = {"Protocol ";" can be one of vmess,vless,shadowsocks,trojan,trojan-go"}; 
+	port = {"Port ";" server port, value"}; 
+	security = {"Encryption method ";" can be omitted, vmess protocol defaults to auto, vless protocol defaults to none"};
+	sni = {"TLS server name ";" The server name field in the TLS client request, if not specified, the host or address field value is taken by default."}; 
+	flow = {"Flow control ";" is currently only used to select the XTLS algorithm, when omitted, the default value is xtls-rprx-direct"}; 
+	obfs = {"Obfuscation plugin";"Optional value：plain,http_simple,http_post,tls1.2_ticket_auth ..."}; 
+	obfsParam = {"Obfuscation parameter ";" obfs_param in SSR"}; 
+	networkParam = {"SSR network protocol parameter";"protocol_param in SSR"}; 
+	concurrency = {"Mux multiplexing: the maximum number of concurrent connections ";" the minimum value is 1, the maximum value is 1024, the special value is -1, and the mux module is not loaded. By default, winXray automatically sets this value according to the connection protocol."}; 
 }
 
 winform.editOutbound.wndproc = function(hwnd,message,wParam,lParam){
@@ -246,95 +246,95 @@ winform.editOutbound.wndproc = function(hwnd,message,wParam,lParam){
 	
 import win.ui.menu;
 var insertFieldMenu = { 
-	{ "允许忽略证书:allowInsecure";
+	{ "Allow to ignore certificates:allowInsecure";
 		function(id){
 			winform.addOutboundField("allowInsecure",true);
 		} 
 	};
-	{ "TLS服务器名:sni";
+	{ "TLS server name:sni";
 		function(id){
 			winform.addOutboundField("sni","");
 		} 
 	};
-	{ "启用TLS:tls";
+	{ "Enable TLS:tls";
 		function(id){
 			winform.addOutboundField("tls","xtls");
 		} 
 	};
-	{ "流控:flow";
+	{ "Flow Control:flow";
 		function(id){
 			winform.addOutboundField("flow","xtls-rprx-direct");
 		} 
 	};
-	{ "多路复用最大连接:concurrency";
+	{ "Multiplexed maximum connection:concurrency";
 		function(id){
 			winform.addOutboundField("concurrency",4);
 		} 
 	};
 
-	{ "伪装类型:type";
+	{ "Camouflage type:type";
 		function(id){
 			winform.addOutboundField("type","http");
 		} 
 	};
-	{ "备注:ps";
+	{ "Remarks:ps";
 		function(id){
 			winform.addOutboundField("ps","");
 		} 
 	};
-	{ "请求主机名:host";
+	{ "Request hostname:host";
 		function(id){
 			winform.addOutboundField("host","");
 		} 
 	};
-	{ "请求路径:path";
+	{ "Request path:path";
 		function(id){
 			winform.addOutboundField("path","/");
 		} 
 	};
-	{ "HTTP请求方法:httpMethod";
+	{ "HTTP request method:httpMethod";
 		function(id){
 			winform.addOutboundField("httpMethod","GET");
 		} 
 	};
-	{ "HTTP请求头:headers";
+	{ "HTTP request header:headers";
 		function(id){
 			winform.addOutboundField("headers",{method="GET"});
 		} 
 	};
-	{ "SSR混淆插件:obfs";
+	{ "SSR obfuscation plugin:obfs";
 		function(id){
 			winform.addOutboundField("obfs","plain");
 		} 
 	};
-	{ "SSR混淆参数:obfsParam";
+	{ "SSR obfuscation parameters:obfsParam";
 		function(id){
 			winform.addOutboundField("obfsParam","");
 		} 
 	};
-	{ "SSR网络协议参数:networkParam";
+	{ "SSR network protocol parameters:networkParam";
 		function(id){
 			winform.addOutboundField("networkParam","");
 		} 
 	};
-	{ "绑定的订阅网址:subscribeUrl";
+	{ "Bound subscription URL:subscribeUrl";
 		function(id){
 			winform.addOutboundField("subscribeUrl","https://"); 
 		} 
 	};
-	{ "允许自动测试并连接:autoConnect";
+	{ "Allow automatic testing and connection:autoConnect";
 		function(id){
 			winform.addOutboundField("autoConnect",false); 
 		} 
 	};
-	{ "SSH管理端口:sshPort";
+	{ "SSH management port:sshPort";
 		function(id){
 			winform.addOutboundField("sshPort",22);
 		} 
 	}; 
 } 
 winform.editOutbound.enablePopMenu({
-	{ "插入配置字段";insertFieldMenu}
+	{ "Insert configuration field";insertFieldMenu}
 })
 
 import style;
@@ -353,7 +353,7 @@ var onEditChange = win.debounce(
 		var data,err = web.json.tryParse(winform.editOutbound.text); 
 		if(!data){
 			if(err){
-				return winform.editOutbound.showErrorTip("JSON 语法错误",err)	
+				return winform.editOutbound.showErrorTip("JSON syntax error",err)	
 			}
 			return;
 		}
@@ -405,17 +405,17 @@ winform.editOutbound.onChange = function(){
 
 winform.btnSaveOutbound.oncommand = function(id,event){
 	if(!#winform.editAddress.text){
-		return winform.editAddress.editBox.showErrorTip("配置错误","服务器地址不能为空")
+		return winform.editAddress.editBox.showErrorTip("Configuration error "," server address cannot be empty")
 	}
 	
 	if(!#winform.editPort.text){
-		return winform.editPort.editBox.showErrorTip("配置错误","端口不能为空")
+		return winform.editPort.editBox.showErrorTip("Configuration error "," port cannot be empty")
 	}
 	
 	if( !#winform.editId.text ){
 		var protocol = winform.outboundConfig.protocol;
 		if((protocol!="socks") && (protocol!="http") && (protocol!="https")){
-			return winform.editId.editBox.showErrorTip("配置错误","当前代理协议密码不能为空")
+			return winform.editId.editBox.showErrorTip("Configuration error","The current proxy protocol password cannot be empty")
 		}  
 	}
 	
@@ -430,17 +430,17 @@ winform.btnSaveOutbound.oncommand = function(id,event){
 import config;
 winform.btnAddOutbound.oncommand = function(id,event){
 	if(!#winform.editAddress.text){
-		return winform.editAddress.editBox.showErrorTip("配置错误","服务器地址不能为空")
+		return winform.editAddress.editBox.showErrorTip("Configuration error "," server address cannot be empty")
 	}
 	
 	if(!#winform.editPort.text){
-		return winform.editPort.editBox.showErrorTip("配置错误","端口不能为空")
+		return winform.editPort.editBox.showErrorTip("Configuration error "," port cannot be empty")
 	}
 	
 	if(!#winform.editId.text  ){
 		var protocol = winform.outboundConfig.protocol
 		if( (protocol!="socks") && (protocol!="http") && (protocol!="https") ){
-			return winform.editId.editBox.showErrorTip("配置错误","当前代理协议密码不能为空")
+			return winform.editId.editBox.showErrorTip("Configuration error","The current proxy protocol password cannot be empty")
 		}
 	}
 	
@@ -505,23 +505,23 @@ winform.btnImportSharedLink.oncommand = function(id,event){
 			winform.editOutbound.text = web.json.stringify(winform.outboundConfig,true,false);
 			onEditChange();
 	
-			winform.msgOk("已成功导入服务器",1000); 
+			winform.msgOk("Server successfully imported",1000); 
 			return; 
 		}
 	}
 
-	winform.msgFrown('未导入服务器！\r\n请先复制以下格式文本（自动清除其中的无效内容）：\r\n\r\n1、分享链接或服务器JSON配置。\r\n支持 vmess://，vless://，ss://，ssr://，trojan://， trojan-go:// 等通用分享链接。\r\n\r\n2、服务器配置的JSON数组,支持winXray格式以及通用格式JSON。\r\n其他 BASE64 编码或明文返回以上1、2条规定的配置或分享链接。')
+	winform.msgFrown('Server not imported! \r\nPlease copy the following formatted text (automatically clear the invalid content):\r\n\r\n1, share link or server JSON configuration. \r\nSupport vmess://, vless://, ss://, ssr://, trojan://, trojan-go:// and other common sharing links. \r\n\r\n2. The JSON array of the server configuration supports winXray format and general format JSON. \r\nOther BASE64 encoding or plain text return to the configuration or sharing link specified in the above 1 and 2.')
 }
  
 winform.btnCopySharedLink.skin(style.link)
 winform.btnCopySharedLink.oncommand = function(id,event){
 	var lnk = winform.editSharedLink.text;
 	if(!#lnk){
-		winform.msgErr("分享链接不能为空",1500);
+		winform.msgErr("Sharing link cannot be empty",1500);
 	}
 	else {
 		win.clip.write(lnk);
-		winform.msgOk("分享链接已复制到剪贴板",1500);
+		winform.msgOk("Share link has been copied to clipboard",1500);
 	} 	
 }
 
@@ -559,7 +559,7 @@ winform.btnUpdateCore.oncommand = function(id,event){
 		if( versionTag ){
 			publish("uiCommand.restartV2RayCore");
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgOk("SSR Core（ ShadowsocksR-native ） 已更新到：" + versionTag,1500)
+			winform.msgOk("SSR Core (ShadowsocksR-native) has been updated to:" + versionTag,1500)
 		}
 		else {
 			winform.btnUpdateCore.disabledText = null;
@@ -571,11 +571,11 @@ winform.btnUpdateCore.oncommand = function(id,event){
 		if( versionTag ){
 			publish("uiCommand.restartV2RayCore");
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgOk("已下载最新 XRay Core 版本：" + versionTag+ '\nV2Ray 内核已切换为：XRay Core',1500)
+			winform.msgOk("Downloaded the latest XRay Core Version：" + versionTag+ '\nV2Ray 内核已切换为：XRay Core',1500)
 		}
 		else {
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgErr("XRay Core 下载失败！");
+			winform.msgErr("XRay Core download failed!");
 		} 	
 	}
 	elseif(sel=="naive"){
@@ -584,11 +584,11 @@ winform.btnUpdateCore.oncommand = function(id,event){
 		if( versionTag ){
 			publish("uiCommand.restartV2RayCore");
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgOk("NaÏveProxy Core 已更新到：" + versionTag,1500)
+			winform.msgOk("NaÏveProxy Core Updated to：" + versionTag,1500)
 		}
 		else {
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgErr("NaÏveProxy Core 下载失败！");
+			winform.msgErr("NaÏveProxy Core download failed!");
 		} 		
 	}	
 	else {
@@ -597,11 +597,11 @@ winform.btnUpdateCore.oncommand = function(id,event){
 		if( versionTag ){
 			publish("uiCommand.restartV2RayCore");
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgOk("已下载最新 V2Ray Core 版本：" + versionTag + '\nV2Ray 内核已切换为： V2Ray Core',1500)
+			winform.msgOk("Downloaded the latest V2Ray Core version：" + versionTag + '\nV2Ray 内核已切换为： V2Ray Core',1500)
 		}
 		else {
 			winform.btnUpdateCore.disabledText = null;
-			winform.msgErr("V2Ray Core 下载失败！");
+			winform.msgErr("V2Ray Core download failed!");
 		} 
 	}
 }
@@ -619,6 +619,22 @@ winform.qrPicture.oncommand = function(id,event){
 		frmChild.createQrCode(lnk);
 		frmChild.show();	
     }	
+}
+
+winform.editId.skin(
+	background = { 
+		hover = "/res/images/btn-hover.png";
+		focus = "/res/images/btn-focus.jpg";
+		active = "/res/images/btn-active.png";
+		disabled = "/res/images/btn-disabled.png"; 
+	}
+)
+winform.editId.oncommand = function(id,event){
+	
+}
+
+winform.editOutbound.oncommand = function(id,event){
+	
 }
 
 winform.show();

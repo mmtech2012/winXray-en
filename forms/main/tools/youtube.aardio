@@ -4,7 +4,7 @@ import win.ui.atom;
 /*DSG{{*/
 var winform = win.form(text="youtube 视频下载工具（点击视频链接即可下载）";right=759;bottom=469)
 winform.add(
-btnVideoInfo={cls="button";text="获取视频下载地址";left=511;top=27;right=732;bottom=60;dr=1;dt=1;font=LOGFONT(h=-16;name='FontAwesome');z=3};
+btnVideoInfo={cls="button";text="Get video download address";left=511;top=27;right=732;bottom=60;dr=1;dt=1;font=LOGFONT(h=-16;name='FontAwesome');z=3};
 editInfo={cls="richedit";left=29;top=83;right=735;bottom=445;autohscroll=false;db=1;dl=1;dr=1;dt=1;edge=1;link=1;multiline=1;vscroll=1;z=1};
 editVideoUrl={cls="edit";text="https://www.youtube.com/watch?v=ZFA5Rax0ypU";left=27;top=29;right=499;bottom=58;dl=1;dr=1;dt=1;edge=1;multiline=1;z=2}
 )
@@ -88,6 +88,10 @@ winform.editInfo.onlink=function(message,href){
 		var downBox = inet.downBox(winform,"下载视频");
 		downBox.download(href,path);
 	}
+}
+
+winform.editInfo.oncommand = function(id,event){
+	
 }
 
 winform.enableDpiScaling();
