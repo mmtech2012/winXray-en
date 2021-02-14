@@ -6,13 +6,14 @@ var winform = win.form(text="github.com 网速优化工具";right=655;bottom=281
 winform.add(
 bk={cls="bk";left=0;top=0;right=659;bottom=34;bgcolor=12632256;z=8};
 cmbIpCidrs={cls="combobox";left=49;top=111;right=328;bottom=137;edge=1;items={};mode="dropdown";z=1};
-editIpCurrent={cls="edit";left=118;top=206;right=366;bottom=230;edge=1;z=5};
-plusExploreHosts={cls="plus";text='\uF07C 编辑hosts文件';left=450;top=204;right=607;bottom=235;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=7};
-plusUpdateDns={cls="plus";text='\uF0AD 更改github.com解析到选定IP / 并更新图像等服务器IP';left=77;top=158;right=563;bottom=189;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=3};
-plusUpdateIps={cls="plus";text='\uF021 获取最新IP列表 / 测速';left=345;top=108;right=607;bottom=139;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=2};
-static={cls="static";text="本工具优化无代理时直连 Github 官网访问当前速度最快的服务器，
-可解决无法下载更新 V2Ray Core / SSR Core ，无法显示 Github 上的图像等问题。";left=49;top=45;right=635;bottom=93;font=LOGFONT(h=-13);transparent=1;z=4};
-static2={cls="static";text="当前指向IP:";left=27;top=208;right=111;bottom=228;align="right";transparent=1;z=6}
+editIpCurrent={cls="edit";left=162;top=202;right=410;bottom=226;edge=1;z=5};
+plusExploreHosts={cls="plus";text='\uF07C Edit the hosts file';left=450;top=204;right=607;bottom=235;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=7};
+plusUpdateDns={cls="plus";text='\uF0AD Change github.com to resolve to selected IP / and update server IP such as images';left=77;top=158;right=563;bottom=189;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=3};
+plusUpdateIps={cls="plus";text='\uF021 Get the latest IP list / speed test';left=345;top=108;right=607;bottom=139;bgcolor=-6371181;font=LOGFONT(h=-15;name='FontAwesome';charset=0);notify=1;z=2};
+static={cls="static";text="This tool is optimized to directly connect to the Github official website to access the fastest server
+currently without an agent. It can solve problems such as the inability to download and update the
+ V2Ray Core / SSR Core and the inability to display the images on Github.";left=49;top=45;right=649;bottom=93;font=LOGFONT(h=-13);transparent=1;z=4};
+static2={cls="static";text="Currently pointing to IP:";left=7;top=208;right=146;bottom=228;align="right";transparent=1;z=6}
 )
 /*}}*/
 

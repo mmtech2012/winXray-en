@@ -1,28 +1,24 @@
-**This fork aim to translate whole project from Chinese to English, feel free to contribute with me**
-
-[Tips for getting started with winXray](./sub/introduce.md)   
-[Related video list for winXray](https://www.youtube.com/results?search_query=winXray)  
-[free vmess subscription link](https://proxypool.ga/vmess/sub)   
-[Shadowsocks subscription link](https://proxypool.ga/ss/sub)     
-[clash subscription link](https://proxypoolss.tk/clash/proxies?speed=100&type=vmess,trojan)   
-
-You can copy the above subscription links in various formats, and click "Bulk Import Links" in winXray to experience winXray's strong compatibility.
-The free server is only for testing (you must use PAC, do not open a global proxy, do not log in to your account, and do not use it for a long time).
+[winXray 入门小技巧](./sub/introduce.md)   
+[winXray 相关视频列表](https://www.youtube.com/results?search_query=winXray)  
+[网络免费 vmess 服务器订阅链接](https://proxypool.ga/vmess/sub)   
+[网络免费 Shadowsocks 服务器订阅链接](https://proxypool.ga/ss/sub)     
+[网络免费 clash 服务器订阅链接](https://proxypoolss.tk/clash/proxies?speed=100&type=vmess,trojan)   
+可复制上面各种格式订阅链接，在 winXray 中点击「批量导入链接」体验 winXray 有强大的兼容性。  
+免费的服务器仅供测试（一定要走 PAC，不要开全局代理不要登录账号更不要长时间使用 ）。
 
 # winXray 
-winXray[:loud_sound:](http://dict.youdao.com/dictvoice?audio=winxray&type=2) fastest , simplest and most compatible Universal client with V2Ray、XRay、Trojan、Trojan-go、Shadowsocks、SSR(ShadowsocksR)、SSRoT、NaïveProxy，SOCKS，HTTP,HTTPS All-round universal client (Windows system), supports concurrent detection of a large number of servers and quickly finds the current fastest server. When the server connection is abnormal, it can automatically find other fastest servers-the switching speed is lightning fast, and the server obtained from the feed is abnormal Subscriptions can be automatically refreshed at any time, and it comes with one-click automatic deployment of server-side tools.
+winXray[:loud_sound:](http://dict.youdao.com/dictvoice?audio=winxray&type=2) 是最简洁轻快的 V2Ray、XRay、Trojan、Trojan-go、Shadowsocks、SSR(ShadowsocksR)、SSRoT、NaïveProxy，SOCKS，HTTP,HTTPS 全能通用客户端（Windows系统），支持并发检测大量服务器并迅速找到当前最快的服务器，服务器连接异常时可自动寻找其他速度最快的服务器 - 切换速度快如闪电，自订阅源获取的服务器异常时可自动刷新订阅，并且自带一键自动部署服务端工具。
 
-**The source code of this software has given up the copyright and contributed to the public domain** ，
-The source code can be compiled with [aardio](http://www.aardio.com) to generate a single file green EXE, **[Click here to download](./../../raw/master/release/winXray.7z)** ([64-bit version)](./../../raw/master/release/winXray.7z) / ([32-bit version)](./../../raw/master/release/winXray32.7z), unzip it and use it directly (small size only **[6.1 MB](./../../raw/master/release/winXray.7z)**-comes with V2Ray Core).
+**本软件源码已放弃版权贡献到公共域** ，源码可使用 [aardio](http://www.aardio.com) 编译生成单文件绿色EXE，**[点这里下载](./../../raw/master/release/winXray.7z)** （ [64位版本](./../../raw/master/release/winXray.7z) / [32位版本](./../../raw/master/release/winXray32.7z) ），解压即可直接使用( 体积很小仅  **[6.1 MB](./../../raw/master/release/winXray.7z)** - 已自带 V2Ray Core ）。  
 
-# Read before use
-Everyone knows why I have to delete the library and run away in the end. ! I deleted the library very quickly, because I wrote the code fast. I completed the main code of winXray in a few hours. After a few days of upgrading, I quickly reached the maturity level of other software written for several years! Because I am about to delete the library, but the updates I pushed up-fork projects are basically not so fast to actively pull updates. You can see that winXray only went online in just a few days and it exceeded 600 forks, so if I don’t push the update before Delete the library, then no one can find the latest version of the source code after I delete the library.
+# 使用前必读    
+最终都要删库跑路的原因大家都懂不用我多说了吧？！ 我删库特别快，是因为我写代码的速度快，我用了几小时就完成了 winXray 的主要代码，用了几天升级就迅速达到了一般其他软件写了几年的成熟度！因为我即将删库，但是我推上去的更新 - fork 的项目基本都没有那么迅速的主动拉更新，大家可以看一下 winXray 上线才短短几天就超过了 600 forks, 所以如果我推送更新之前不删库，那么我删库以后就没有人能找到最新版本的源代码。   
   
-Nowadays, most anti-virus software is whitelisted, so the new EXE will report the virus randomly. Because I update too fast, I keep pushing new EXE up, so you may encounter false positives, but you can use the source. The code compiles the exact same EXE by yourself, and some people brag that other circumvention software does not make false positives-you can go to issues and search online to find out how many false positives are there, OK? ! If you encounter a false alarm, you can submit it to your antivirus vendor for verification, or you can compile the source code to generate an EXE and use it. It is easy to solve and verify the problem-other routines are redundant.
+现在大多杀毒软件都是白名单查杀，所以新生的EXE都会乱报病毒，因为我更新的速度太快，所以不断的推新EXE上来，所以你可能遇到误报，但是你完全可以使用源代码自己编译出一模一样的EXE，还有人吹牛说其他翻墙软件不误报 - 你去 issues 里以及网上搜一下有多少误报好不好？！遇到误报可以提交给你的杀毒厂商核实，也可以自己编译源码生成EXE后使用，解决和核实问题很容易 - 其他套路都是多余的。
   
-Originally, the winXray source code has given up the copyright and contributed to the public domain, but someone (TheMRLL) took the source code and dragged a big and ugly promotion button on it, and released a new version that claimed to be official without adding any function, and also made the source code very much. If something went wrong, I slandered the author (you claimed to be the official open source software if you didn’t understand the wrong information), and blocked and threatened posts that mentioned the original winXray. I was really surprised that there are such shameless people in the world. Give you freedom, won’t your conscience hurt if you look so ugly? ! Originally I wanted to change a license to restrict this bad behavior, but in the end I decided to continue to give up the copyright and continue to contribute the source code to the public domain. Now that the source code is open, it must be completely open. We cannot just because there is Individual villains give up their kind heart.
+本来 winXray 源码已放弃版权贡献到公共域，但是有人（TheMRLL ）把源码拿去拖了个又大又丑的推广按钮上去，什么功能也不加就发布新版自称官方，而且还把源码搞得很乱出了问题的对本作者进行诋毁（ 错误信息都看不懂居然自称开源软件官方 ），对提及原版 winXray 的帖子进行封删和威胁，我真是惊到了世上居然有如此无耻之人，本来就是给你自由发挥的，吃相这么难看良心不会痛吗？！本来我想改一个许可证限制一下这种不好的行为，但是最后我还是决定继续放弃版权，继续将源码贡献到公共域，即然开放源码，就一定要开放得彻底，我们不能因为世上有个别的恶棍而放弃自己善良的初心。 
 
-Recently it was discovered that TheMRLL has some very strange behaviors. Every time I release a new version, he copies and pastes it later and then changes the version number to release it. <span style="color:red"> What’s even more strange is that his commits are basically fake. I checked it with a file comparison tool. Many of his so-called improvements are just adding empty functions</span> (and the sample code generated by double-clicking the control in the development tool). In addition, he didn't know why a lot of code was placed in the wrong place when copying and pasting, so the program he provided had many strange bugs-the original version I provided was not available. Although I am not against everyone freely using winXray's source code, this TheMRLL is really outrageous. Please download the EXE provided by him safely and carefully.
+最近又发现 TheMRLL 有一些很奇怪的行为。每次我发布新版，他就在后面复制粘贴然后改版本号发布，<span style="color:red">更奇怪的是他的 commits 基本都是伪造的，我用文件比较工具查了一下，他的多个所谓的改进都只是添加了空函数</span>（ 而且还是在开发工具里双击控件生成的范例代码 ）。另外他不知道为什么复制粘贴时很多代码放错了位置，所以他提供的程序很多奇怪的 BUG - 这些我提供的原版是没有的。 虽然我并不反对大家自由使用 winXray 的源码，但这个 TheMRLL 实在是太不像话，他提供的 EXE 请大家注意安全谨慎下载。
 
 # PAC 代理模式 / 全局代理 + 路由模式 对比
 
@@ -141,5 +137,3 @@ iptables -A INPUT -p tcp --dport 80 -j ACCEPT;iptables -A INPUT -p tcp --dport 4
 ```
 
 安装以前需要提前准备一个域名，并将上面脚本中的 example.com 替换为你的域名，user:pass 改为代理登录用户名与密码。
-
-> Written with [StackEdit](https://stackedit.io/).

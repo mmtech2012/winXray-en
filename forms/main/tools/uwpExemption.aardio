@@ -6,12 +6,13 @@ import fonts.fontAwesome;
 /*DSG{{*/
 var winform = win.form(text="UWP 应用 - 本机网络隔离工具";right=1150;bottom=666;bgcolor=16777215)
 winform.add(
-btnAllowLocalhostLoopback={cls="plus";text='\uF13E  允许所有应用访问本机网络';left=562;top=625;right=818;bottom=661;bgcolor=14609886;db=1;dr=1;font=LOGFONT(h=-16;name='FontAwesome');notify=1;tabstop=1;z=5};
-btnDisableLocalhostLoopback={cls="plus";text='\uF023  禁止所有应用访问本机网络';left=825;top=625;right=1081;bottom=661;bgcolor=14147583;db=1;dr=1;font=LOGFONT(h=-16;name='FontAwesome');notify=1;tabstop=1;z=6};
+btnAllowLocalhostLoopback={cls="plus";text=' \uF13E Allow all applications to access the local network';left=485;top=625;right=792;bottom=661;bgcolor=14609886;db=1;dr=1;font=LOGFONT(h=-16;name='FontAwesome');notify=1;tabstop=1;z=5};
+btnDisableLocalhostLoopback={cls="plus";text='\uF023 Prevent all applications from accessing the local network';left=799;top=625;right=1131;bottom=661;bgcolor=14147583;db=1;dr=1;font=LOGFONT(h=-16;name='FontAwesome');notify=1;tabstop=1;z=6};
 listview={cls="listview";left=8;top=41;right=1138;bottom=617;acceptfiles=1;asel=false;bgcolor=16777215;db=1;dl=1;dr=1;dt=1;edge=1;font=LOGFONT(name='SimSun');fullRow=1;gridLines=1;hide=1;vscroll=1;z=1};
-plusLoading={cls="plus";left=368;top=195;right=739;bottom=457;color=15780518;db=1;dl=1;dr=1;dt=1;font=LOGFONT(h=-96;name='FontAwesome');z=2};
+plusLoading={cls="plus";left=368;top=195;right=739;bottom=457;color=15780518;db=1;dl=1;dr=1;dt=1;font=LOGFONT(h=-96;name='FontAwesome');notify=1;z=2};
 plusSearch={cls="plus";left=727;top=3;right=1136;bottom=33;align="right";autohscroll=false;autovscroll=false;border={bottom=1;color=-4144960};dr=1;dt=1;editable=1;font=LOGFONT(h=-13);hide=1;textPadding={top=10;bottom=3};valign="top";z=3};
-tip={cls="static";text="单击列标题可排序，双击列表项可复制，右键点列表项可弹出菜单，回车搜索或刷新";left=13;top=626;right=552;bottom=655;db=1;dl=1;dr=1;transparent=1;z=4}
+tip={cls="static";text="Click the column header to sort, double-click the list item to copy, right-click the list item to
+ pop up a menu, press Enter to search or refresh";left=13;top=626;right=552;bottom=655;db=1;dl=1;dr=1;transparent=1;z=4}
 )
 /*}}*/
 
@@ -22,20 +23,20 @@ if(!atom && hwnd){
 }
 
 uiLanguage = {
-	displayName = "显示名称";
-	packageName = "完整包名";
-	localhost = "本机";
-	enabled = "允许";
-	disabled = "禁止";
-	searchCueBannerText = "输入应用名（支持模式匹配）";
-	exemptAll = '\uF13E  允许所有应用访问本机网络';
-	exemptNone = '\uF023  禁止所有应用访问本机网络';
-	allowLocalhostLoopback = "允许访问本机网络";
-	disableLocalhostLoopback = "禁止访问本机网络";
-	requiredWin10 = "本程序仅支持 WIN10";
-	run = "启动应用";
-	tip = "单击列标题可排序，双击列表项可复制，右键点列表项可弹出菜单，回车搜索或刷新";
-	title = "UWP 应用 - 本机网络隔离工具";
+	displayName = "display name";
+	packageName = "Full package name";
+	localhost = "Native";
+	enabled = "allow";
+	disabled = "Prohibit";
+	searchCueBannerText = "Enter the application name (support pattern matching）";
+	exemptAll = '\uF13E  Allow all apps to access the local network';
+	exemptNone = '\uF023  Prevent all apps from accessing the local network';
+	allowLocalhostLoopback = "Allow access to the local network";
+	disableLocalhostLoopback = "Prohibit access to the local network";
+	requiredWin10 = "This program only supports WIN10";
+	run = "Start application";
+	tip = "Click the column header to sort, double-click the list item to copy, right-click the list item to pop up a menu, press Enter to search or refresh";
+	title = "UWP Application-Native network isolation tool";
 }
 
 import win.ui.grid;
@@ -235,6 +236,18 @@ winform.show();
 import win.dlg.message;
 if(!_WIN10_LATER){
 	winform.msgWarn(uiLanguage.requiredWin10)
+}
+
+winform.plusLoading.skin(
+	background = { 
+		hover = "/res/images/btn-hover.png";
+		focus = "/res/images/btn-focus.jpg";
+		active = "/res/images/btn-active.png";
+		disabled = "/res/images/btn-disabled.png"; 
+	}
+)
+winform.plusLoading.oncommand = function(id,event){
+	
 }
 
 win.loopMessage();

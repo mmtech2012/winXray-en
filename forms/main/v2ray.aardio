@@ -3,8 +3,8 @@ import fonts.fontAwesome;
 /*DSG{{*/
 var frmXray = win.form(text="winXray ";right=959;bottom=591;bgcolor=16777215)
 frmXray.add(
-btnEditPacOrUwp={cls="plus";text="Edit PAC";left=345;top=368;right=433;bottom=398;align="left";db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF1C4';notify=1;textPadding={left=30};z=7};
-btnImportServerFromClipBd={cls="plus";text="Import links in bulk";left=440;top=368;right=591;bottom=398;align="left";db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=8};
+btnEditPacOrUwp={cls="plus";text="Edit PAC";left=349;top=366;right=436;bottom=396;align="left";db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF1C4';notify=1;textPadding={left=30};z=7};
+btnImportServerFromClipBd={cls="plus";text="Import links in bulk";left=445;top=366;right=596;bottom=396;align="left";db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF196 ';notify=1;textPadding={left=30};z=8};
 btnTcping={cls="plus";text="Detect and connect to the fastest";left=694;top=366;right=941;bottom=398;align="left";bgcolor=11580047;border={radius=4};db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=18}};iconText='\uF012';notify=1;textPadding={left=42};z=3};
 chkAutoTest={cls="plus";text="Auto Test";left=594;top=368;right=684;bottom=398;align="left";db=1;dr=1;font=LOGFONT(h=-13);iconStyle={align="left";font=LOGFONT(h=-13;name='FontAwesome');padding={left=12}};iconText='\uF0C8';notify=1;textPadding={left=30};z=9};
 edit={cls="edit";left=6;top=405;right=953;bottom=585;bgcolor=0;color=16777215;db=1;dl=1;dr=1;edge=1;hscroll=1;multiline=1;vscroll=1;z=2};
@@ -922,7 +922,7 @@ subscribe("sysProxy.modeChanged",function(mode){
 	
 	if(mode = "pac"){
 		frmXray.radioProxyPac.checked = true;
-		if(_WIN10_LATER) frmXray.btnEditPacOrUwp.text = "Configure PAC";
+		if(_WIN10_LATER) frmXray.btnEditPacOrUwp.text = "Edit PAC";
 	}
 	elseif(mode = "proxy"){
 		frmXray.radioProxy.checked = true;
